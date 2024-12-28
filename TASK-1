@@ -1,0 +1,26 @@
+//setup(): Runs once when the Arduino is powered on or reset. It configures the LED pin as an output.
+//loop(): Repeats indefinitely. It turns the LED on, waits for a specified interval, turns it off, and waits again.
+//digitalWrite(pin, state): Controls the state of the LED (HIGH for ON, LOW for OFF).
+//delay(ms): Pauses the program for a specified time in milliseconds
+
+
+// Define the pin number for the LED
+const int ledPin = 13;
+
+// Time interval in milliseconds
+const int interval = 1000; // 1 second
+
+void setup() {
+  // Set the LED pin as an output
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // Turn the LED on
+  digitalWrite(ledPin, HIGH);
+  delay(interval); // Wait for the interval
+
+  // Turn the LED off
+  digitalWrite(ledPin, LOW);
+  delay(interval); // Wait for the interval
+}
